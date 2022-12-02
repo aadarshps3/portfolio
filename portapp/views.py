@@ -17,12 +17,12 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 
 # Define function to download pdf file using template
-def download_file(request, filename=''):
+def download_file(request, filename='ADARSH RESUME.pdf'):
     if filename != '':
         # Define Django project base directory
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         # Define the full file path
-        filepath = BASE_DIR + 'resume.pdf' + filename
+        filepath = r"C:\Users\ADARSH PS\PycharmProjects\portfolio\ADARSH RESUME.pdf"
         print(filepath)
         # Open the file for reading content
         path = open(filepath, 'rb')
